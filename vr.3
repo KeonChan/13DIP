@@ -1,0 +1,46 @@
+# Importing the modules
+from english_words import english_words_set  #This will import a list of English words
+from tkinter import *  #Tkinter helps with creating the frames and define their attributes
+import tkinter.font as font  #This added a variaety of fonts
+import random  #This will be used to randomise the list of English words
+
+#Creating the main window and adding size, title and color
+window = Tk()
+window.geometry('600x600')  #Set window size
+window.title("Typing Test")  #Adding a title
+window.config(bg='#ccc5b9')  #Set window colour
+
+#Creating a frame to show the Test heading
+heading1 = Frame(window, bg="#403d39", bd=5)
+heading1.place(relx=0.2, rely=0.2, relwidth=0.6, relheight=0.16)
+headingLabel1 = Label(heading1,
+                      text="Welcome to Typing Test",
+                      bg='#fffcf2',
+                      fg='#252422',
+                      font=('Impact', 17, 'bold'))
+headingLabel1.place(relx=0, rely=0, relwidth=1, relheight=1) #Set the placement of the heading
+
+#Creating a button to start the game. The startGame function, given as command parameter. The program runs when clicking the button
+button1 = Button(window,
+                 text="Start",
+                 bg= '#eb5e28',
+                 fg='#fffcf2',
+                 width=20,
+                 height=2,
+                 font=('Impact', 15, 'bold'))
+button1.place(relx=0.25, rely=0.4) #Set the placement of the button
+
+window.mainloop()  #Runs the window till closed
+
+#These are the main variables
+score = 0
+missed = 0
+timer = 0
+count = 0
+word = list(english_words_set)
+
+#Creating the game window
+window2= Tk()
+window2.geometry('700x600')
+window2.title('Typing Test')
+window2.config(bg='#fffcf2')
