@@ -34,7 +34,7 @@ class TypeSpeed:
         self.screen = pygame.display.set_mode((self.w,self.h))
         pygame.display.set_caption('Type Speed test')
         
-    def get_sentence(self): #Reading from text file
+    def get_sentence(self): #Reading from text filse
            read = open('sentences.txt').read()
            get_sentence = read.split('\n')
            sentence = random.choice(get_sentence)
