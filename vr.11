@@ -136,7 +136,6 @@ class TypeSpeed:
                                 self.input_text += event.unicode
                             except:
                                 pass
-            
             pygame.display.update()
              
                 
